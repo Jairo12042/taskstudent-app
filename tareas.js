@@ -1,23 +1,47 @@
+let contador = 0;
+
 function agregarTarea(){
 
-    let tarea = document.getElementById("nuevaTarea").value;
+    let input = document.getElementById("nuevaTarea");
+    let texto = input.value;
 
-    if(tarea === ""){
+    if(texto === ""){
         alert("Escribe una tarea");
         return;
     }
 
     let lista = document.getElementById("listaTareas");
 
-    let elemento = document.createElement("li");
+    let li = document.createElement("li");
 
-    elemento.textContent = tarea;
+    let span = document.createElement("span");
+    span.textContent = texto;
 
-    elemento.onclick = function(){
-        this.style.textDecoration = "line-through";
+    span.onclick = function(){
+        span.classList.toggle("completada");
     };
 
-    lista.appendChild(elemento);
+    let boton = document.createElement("button");
+    boton.textContent = "X";
+    boton.className = "eliminar";
 
-    document.getElementById("nuevaTarea").value = "";
+    boton.onclick = function(){
+        lista.removeChild(li);
+        contador--;
+        actualizarContador();
+    };
+
+    li.appendChild(span);
+    li.appendChild(boton);
+
+    lista.appendChild(li);
+
+    contador++;
+    actualizarContador();
+
+    input.value="";
+}
+
+function actualizarContador(){
+    document.getElementById("contador").textContent = contador;
 }
