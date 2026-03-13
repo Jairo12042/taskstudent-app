@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+    <meta charset="UTF-8">
     <title>TaskStudent App</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-<h1>Gestor de tareas estudiantiles</h1>
+<div class="contenedor">
 
-<input type="text" id="nuevaTarea" placeholder="Escribe una tarea">
-<button onclick="agregarTarea()">Agregar</button>
+<h1>📚 TaskStudent App</h1>
+<p>Organiza tus tareas académicas</p>
 
-<h2>Lista de tareas</h2>
+<div class="entrada">
+    <input type="text" id="nuevaTarea" placeholder="Escribe una nueva tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+</div>
+
+<h3>Tareas pendientes: <span id="contador">0</span></h3>
 
 <ul id="listaTareas"></ul>
+
+</div>
 
 <script src="tareas.js"></script>
 
