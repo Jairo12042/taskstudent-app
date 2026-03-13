@@ -21,13 +21,13 @@ y marcar tareas como completadas.
 
 ## Estructura del proyecto
 
-taskstudent-app
-│
-├── README.md
-├── index.html
-├── tareas.js
-├── estilos.css
-└── tareas.txt
+- taskstudent-app
+- │
+- ├── README.md
+- ├── index.html
+- ├── tareas.js
+- ├── estilos.css
+- └── tareas.txt
 
 ## Integrantes
 - Líder del proyecto:Jairo
